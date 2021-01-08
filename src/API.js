@@ -5,9 +5,9 @@ module.exports = class API {
     
     /*
     * API class
-    * @param {object} options - options for api.
-    * @param {string} options.apikey - the API key. (Required)
-    * @param {string} [options.reigon="na1"] - the reigon (optional)
+    * @param {object} options options for api.
+    * @param {string} options.apikey the API key. (Required)
+    * @param {string} [options.reigon="na1"] the reigon (optional)
     */
     
     if(!options.apikey) throw new Error("No API key entered.")
