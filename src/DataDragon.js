@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 class DataDragon {
   
     /**
-    * API class
+    * DataDragon class
     * @param {object} options options for DataDragon.
     * @param {string} [options.version="11.1.1"] version
     * @param {string} [options.lang="en_US"] language 
