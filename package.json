@@ -7,11 +7,14 @@
   "description": "A library that is used to fetch League Of Legends data from the Riot Games API.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.json --verbose"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "jsdoc": "^3.6.6",
+    "braintree-jsdoc-template": "^3.3.0"
   },
   "engines": {
     "node": "12.x"
