@@ -2,12 +2,32 @@ const fetch = require('node-fetch')
 
 class DataDragon {
   
+    /*
+    * API class
+    * @param {object} options - options for DataDragon.
+    * @param {string} [options.version="11.1.1"] - version
+    * @param {string} [options.lang="en_US"] - language 
+    */
+  
   constructor(options = {}) {
+    /*
+    * Versions for Data Dragon
+    * @type {string}
+    */
     this.version = options.version || "11.1.1";  
+    
+    /*
+    * Language
+    * @type {string} 
+    */
     this.lang = options.lang || "en_US";
   }  
   
-  
+  /*
+  * Gets all availible versions
+  * @returns {Promise<array>}
+  * @static
+  */
   static getVersions() {
     return new Promise(resolve => {
     fetch(`https://ddragon.leagueoflegends.com/api/versions.json`)
@@ -15,6 +35,12 @@ class DataDragon {
     .then(resolve)
     })           
   }
+  
+  /*
+  * Finds a champion
+  * @param {string} champion champion name
+  * @returns {Promise<object>} 
+  */
   
   
   findChampion(champion) {  
@@ -26,6 +52,12 @@ class DataDragon {
     })
   }
   
+  /*
+  * Finds an item
+  * @param {string} item item name
+  * @returns {Promise<object>} 
+  */
+  
   async findItem(name) {
     if(!name) throw new SyntaxError("No item name specified.")
     let res = await fetch(`http://ddragon.leagueoflegends.com/cdn/${this.version}/data/en_US/item.json`)
@@ -34,6 +66,12 @@ class DataDragon {
     if(!filteredResult || !filteredResult.length) throw new Error("Item not found.")
     return filteredResult[0];
   }
+  
+  /*
+  * Finds a spell
+  * @param {string} spell spell name
+  * @returns {Promise<object>} 
+  */
   
   async findSpell(name) {
     if(!name) throw new SyntaxError("No spell name specified.")
@@ -44,6 +82,11 @@ class DataDragon {
     return filteredResult[0];
   }
   
+  /*
+  * Fetches all of the items
+  * @returns {Promise<object>} 
+  */
+  
   async fetchAllItems() {  
      let res = await fetch(`http://ddragon.leagueoflegends.com/cdn/${this.version}/data/en_US/item.json`)
      let json = await res.json();
@@ -51,6 +94,11 @@ class DataDragon {
     
      return result;
   };
+  
+   /*
+  * Fetches all spells
+  * @returns {Promise<object>} 
+  */
   
   async fetchAllSpells() {
     
