@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.json --verbose"
+    "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.json --verbose src/API.js src/DataDragon.js"
   },
   "dependencies": {
     "express": "^4.17.1",

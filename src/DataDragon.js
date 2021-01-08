@@ -38,7 +38,7 @@ class DataDragon {
   
   /*
   * Finds a champion
-  * @param {string} champion champion name
+  * @param {string} champion - champion name
   * @returns {Promise<object>} 
   */
   
@@ -54,7 +54,7 @@ class DataDragon {
   
   /*
   * Finds an item
-  * @param {string} item item name
+  * @param {string} item - item name
   * @returns {Promise<object>} 
   */
   
@@ -69,7 +69,7 @@ class DataDragon {
   
   /*
   * Finds a spell
-  * @param {string} spell spell name
+  * @param {string} spell - spell name
   * @returns {Promise<object>} 
   */
   
