@@ -11,10 +11,10 @@
     "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.json --verbose src/API.js src/DataDragon.js"
   },
   "dependencies": {
+    "braintree-jsdoc-template": "^3.3.0",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
     "jsdoc": "^3.6.6",
-    "braintree-jsdoc-template": "^3.3.0"
+    "node-fetch": "^2.6.1"
   },
   "engines": {
     "node": "12.x"
