@@ -1,8 +1,9 @@
-const DataDragon = require('./classes/DataDragon');
-const API = require('./classes/API.js');
+const DataDragon = require('./src/DataDragon');
+const API = require('./src/API.js');
 const fetch = require('node-fetch')
 
 module.exports = {
   DataDragon: DataDragon,
-  API: API
+  API: API,
+  version: require('./package.json').version
 }
